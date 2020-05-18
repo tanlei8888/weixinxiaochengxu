@@ -1,0 +1,17 @@
+{
+  "pages":[
+    "pages/im/im",
+    "pages/dogage/dogage",
+    "pages/99乘法表/99乘法表",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

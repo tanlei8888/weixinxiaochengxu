@@ -1,0 +1,9 @@
+<!--pages/99乘法表/99乘法表.wxml-->
+<text>99乘法表</text>
+<view >
+  <block wx:for = '{{arr}}'wx:for-item='i'wx:for-index='index1'wx:key='index1'>
+    <view wx:for='{{arr}}'wx:for-item='j'wx:for-index='index2'wx:key='index2'>
+    {{i}}*{{j}}={{i*j}}
+    </view>
+  </block>
+</view>

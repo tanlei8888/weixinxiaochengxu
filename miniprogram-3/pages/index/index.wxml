@@ -1,0 +1,8 @@
+<!--index.wxml-->
+<view class="nav">
+  <view class="itme">菜单</view>
+  <view class="itme">菜单</view>
+  <view class="itme">菜单</view>
+  <view class="itme">菜单</view>
+  <view class="itme">菜单</view>
+</view>

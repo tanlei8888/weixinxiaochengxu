@@ -1,0 +1,5 @@
+<!--pages/im/im.wxml-->
+<text>pages/im/im.wxml</text>
+<button bindtap="handelClick">点击切换</button>
+<image src="{{img_url}}">
+</image>

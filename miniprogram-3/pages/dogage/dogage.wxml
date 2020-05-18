@@ -1,0 +1,11 @@
+<!--pages/dogage/dogage.wxml-->
+<text>狗的年龄</text>
+<view>
+狗的年龄为：
+    <view wx:if='{{dogage <= 2}}'> 
+      {{10.5*dogage}}
+    </view>
+    <view wx:else>
+      {{10.5*2+(dogage-2)*4}}
+    </view>
+</view>
