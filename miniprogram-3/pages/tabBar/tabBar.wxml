@@ -1,0 +1,5 @@
+<!--pages/tabBar/tabBar.wxml-->
+<text>tab导航栏</text>
+<view class="nav">
+    <view class="nav-item"></view>
+</view>

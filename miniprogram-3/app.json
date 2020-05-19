@@ -1,9 +1,12 @@
 {
   "pages":[
+    "pages/99乘法表/99乘法表",
+    "pages/华仔/华仔",
+    "pages/计程车收费/计程车收费",
+    "pages/tabBar/tabBar",
+    "pages/index/index",
     "pages/im/im",
     "pages/dogage/dogage",
-    "pages/99乘法表/99乘法表",
-    "pages/index/index",
     "pages/logs/logs"
   ],
   "window":{
@@ -11,6 +14,30 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/tabBar/tabBar",
+      "text": "首页",
+      "iconPath": "images/home.png",
+      "selectedIconPath": "images/home-o.png"
+    },{
+      "pagePath": "pages/tabBar/tabBar",
+      "text": "编辑",
+      "iconPath": "images/edit.png",
+      "selectedIconPath": "images/edit-o.png"
+    },{
+      "pagePath": "pages/tabBar/tabBar",
+      "text": "购物车",
+      "iconPath": "images/cart.png",
+      "selectedIconPath": "images/cart-o.png"
+    },{
+      "pagePath": "pages/tabBar/tabBar",
+      "text": "个人",
+      "iconPath": "images/person.png",
+      "selectedIconPath": "images/person-o.png"
+    }
+  ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

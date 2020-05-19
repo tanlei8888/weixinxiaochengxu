@@ -2,8 +2,6 @@
   display: flex;
   background-color: black;
   color: white;
-  /* justify-content: center;
-  align-items: center; */
 }
 .nav .itme {
   text-align: center;

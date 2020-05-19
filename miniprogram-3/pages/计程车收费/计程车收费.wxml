@@ -1,0 +1,14 @@
+<!--pages/计程车收费/计程车收费.wxml-->
+<text>计程车收费</text>
+
+<view>共{{mile}}公里，价格：</view>
+<view wx:if='{{mile<=3}}'>
+  {{10}}元
+</view> 
+<view wx:elif='{{mile<=10 && mile > 3}}'>
+{{(mile-3)*2+10}}元
+</view>
+<view wx:else>
+  {{10+(10-3)*2+(mile-10)*3}}元
+  <view>{{str}}</view>
+</view>

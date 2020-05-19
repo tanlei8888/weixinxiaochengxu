@@ -1,1 +1,9 @@
 /* pages/99乘法表/99乘法表.wxss */
+.row{
+  display: flex;
+  justify-content: flex-start;
+  font-size: 20rpx;
+}
+.row .col{
+  width: 80rpx;
+}

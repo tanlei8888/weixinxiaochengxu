@@ -1,0 +1,5 @@
+<!--pages/华仔/华仔.wxml-->
+<text>pages/华仔/华仔.wxml</text>
+<view wx:for='{{arr}}'>
+{{item.title}}:{{item.name}}
+</view>
