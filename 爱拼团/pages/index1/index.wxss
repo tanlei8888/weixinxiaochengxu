@@ -1,0 +1,50 @@
+.btnContainer{
+  height: 300rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100rpx;
+}
+.btnContainer button{
+  border: 1px solid #E64340;
+  color: #E64340;
+  background-color: white;
+}
+.apt-my-orderFunc{
+  height: 200rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 20rpx solid #F9F9F9;
+  border-bottom: 20rpx solid #F9F9F9;
+}
+.orderFunc-item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.orderFunc-item .iconfont{
+  font-size: 60rpx;
+}
+
+.apt-my-systemFunc{
+  width: 96%;
+  margin: 0 auto;
+}
+.systemFunc-item{
+  height: 100rpx;
+  border-bottom: 2rpx solid #c8c8c8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.systemFunc-item .left{
+  width: 240rpx;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.systemFunc-item .right{
+  padding-right: 40rpx;
+}

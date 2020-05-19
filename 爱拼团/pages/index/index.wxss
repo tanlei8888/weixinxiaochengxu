@@ -7,7 +7,7 @@
 }
 .swiperBOx swiper swiper-item image {
   width: 100%;
-  height: 250rpx;
+  height: 100%;
 }
 .navIcon {
   width: 750rpx;
@@ -17,12 +17,15 @@
   align-items: center;
 }
 .navIcon image {
-  width: 100rpx;
-  height: 100rpx;
+  width: 120rpx;
+  height: 120rpx;
+}
+.wear {
+  margin-bottom: 30rpx;
 }
 .wear text {
   padding-left: 10rpx;
-  color: #fee1eb;
+  color: pink;
 }
 .wear .wear-img {
   display: flex;
@@ -33,4 +36,5 @@
 .wear .wear-img image {
   width: 230rpx;
   height: 170px;
+  padding: 10rpx 0;
 }
