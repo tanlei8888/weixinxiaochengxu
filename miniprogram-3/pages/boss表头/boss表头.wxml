@@ -1,0 +1,12 @@
+<!--pages/boss表头/boss表头.wxml-->
+<text>pages/boss表头/boss表头.wxml</text>
+<view class="nav">
+  <view class="left">
+    <text>Web前端框架...</text>
+  </view>
+  <view class="right">
+    <view class="iconfont icon-21"></view>
+    <view class="iconfont icon-anjianfengexian"></view>
+    <view class="iconfont icon-sousuo"> </view>
+  </view>
+</view>

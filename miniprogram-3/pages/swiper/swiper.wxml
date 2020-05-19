@@ -1,0 +1,23 @@
+
+<view class="container">
+  <swiper
+  indicator-dots="true"
+  indicator-active-color="white"
+  indicator-color="black"
+  interval="2000"
+  autoplay="true"
+  circular="true"
+  >
+    <swiper-item>
+    <image src="/images/b1.jpg" mode="aspectFill"></image>
+    </swiper-item>
+    <swiper-item>
+    <image src="/images/b3.jpg" mode="aspectFill"></image>
+    </swiper-item>
+    <swiper-item>
+    <image src="/images/cat.jpg" mode="aspectFill"></image>
+    </swiper-item>
+  </swiper>
+  <text selectable="{{true}}" decode="{{true}}">及时当自勉，&nbsp;岁月不饶人</text>
+  
+</view>

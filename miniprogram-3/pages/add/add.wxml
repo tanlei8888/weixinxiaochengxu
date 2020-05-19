@@ -1,0 +1,6 @@
+<!--pages/add/add.wxml-->
+<!-- <text>pages/add/add.wxml</text> -->
+<button bindtap="addMessage">添加消息</button>
+<view class="content">
+  <text decode="{{true}}">{{text}}</text>
+</view>

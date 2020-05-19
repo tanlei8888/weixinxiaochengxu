@@ -1,0 +1,22 @@
+.nav {
+  height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: skyblue;
+  box-sizing: border-box;
+}
+.nav .left {
+  padding-left: 20rpx;
+}
+.nav .left text {
+  color: white;
+}
+.nav .right {
+  display: flex;
+  padding-right: 20rpx;
+}
+.nav .right .iconfont {
+  font-size: 30rpx;
+  color: white;
+}

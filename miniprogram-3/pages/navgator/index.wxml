@@ -1,0 +1,32 @@
+<navigator url="/pages/swiper/swiper"
+open-type="navigate"
+
+>
+跳转页面 可返回跳转
+</navigator>
+<navigator url="/pages/swiper/swiper"
+open-type="redirect"
+>
+跳转页面 关闭当前页面 不可返回
+</navigator>
+<navigator url="/pages/tabBar/tabBar"
+open-type="switchTab"
+>
+跳转到tabBar页面 关闭其他所有页面
+</navigator>
+<navigator url="/pages/tabBar/tabBar"
+open-type="relaunch"
+>
+关闭所有页面 打开到应用内的某个页面
+</navigator>
+<navigator url="/pages/tabBar/tabBar"
+open-type="navigateBack"
+>
+返回到某个页面
+</navigator>
+<navigator url="/pages/tabBar/tabBar"
+open-type="exit"
+target="miniProgram"
+>
+退出小程序
+</navigator>

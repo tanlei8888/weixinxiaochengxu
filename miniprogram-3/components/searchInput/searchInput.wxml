@@ -1,0 +1,4 @@
+<view class="search">
+  <view class="search-input">{{title}}</view>
+</view>
+<button bindtap="handleClick">传参</button>

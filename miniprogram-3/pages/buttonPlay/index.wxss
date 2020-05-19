@@ -1,0 +1,4 @@
+/* pages/buttonPlay/index.wxss */
+.box{
+  height: 500rpx;
+}
