@@ -1,20 +1,17 @@
-// pages/index1/index.js
+// pages/zujianchuancan/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    userInfo:[]
+    tabs:[
+      {name:"体验问题"},
+      {name:"商品、商家投诉"}
+    ]
   },
-  getUserInfoFunc: function(e) {
-    console.log(e)
-    let userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: userInfo,
-      hasUserInfo: true
-    })
-    wx.setStorageSync('userInfo', userInfo)
+  onMyTab(e){
+    console.log(e);
   },
   /**
    * 生命周期函数--监听页面加载
@@ -33,12 +30,8 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function (e) {
-      let userInfo = wx.getStorageSync("userInfo")
-      this.setData({
-        userInfo:userInfo
-      }
-      )
+  onShow: function () {
+
   },
 
   /**
@@ -75,5 +68,4 @@ Page({
   onShareAppMessage: function () {
 
   }
-  
 })

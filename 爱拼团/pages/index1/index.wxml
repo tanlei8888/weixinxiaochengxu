@@ -1,5 +1,18 @@
 <view class="btnContainer">
-  <button open-type="getUserInfo" bindgetuserinfo="getUserInfoFunc">登录</button>
+  <block wx:if="{{userInfo.nickName}}">
+    <view class="userBg">
+      <image src="{{userInfo.avatarUrl}}"></image>
+    </view>
+    <view class="userHeaderimg">
+      <image src="{{userInfo.avatarUrl}}"></image>
+    </view>
+    <view class="myName">
+    {{userInfo.nickName}}
+    </view>
+  </block>
+  <block wx:else>
+    <button open-type="getUserInfo" bindgetuserinfo="getUserInfoFunc">登录</button>
+  </block>
 </view>
 <view class="apt-my-orderFunc">
   <view class="orderFunc-item">
@@ -24,21 +37,24 @@
   <view class="systemFunc-item">
     <view class="left">
       <view class="iconfont icon-lianxikefu"></view>
-      <view class="text">联系客服</view>
+      <!-- <view class="text" bindtap="">联系客服</view> -->
+      <button open-type="contact" plain="true" size="mini">联系客服</button>
     </view>
     <view class="right">400-618-4000</view>
   </view>
   <view class="systemFunc-item">
     <view class="left">
       <view class="iconfont icon-yijianfankui"></view>
-      <view class="text">意见反馈</view>
+      <!-- <view class="text">意见反馈</view> -->
+      <button open-type="feedback" plain="true" size="mini">意见反馈</button>
     </view>
     <view class="right"></view>
   </view>
   <view class="systemFunc-item">
     <view class="left">
-      <view class="iconfont icon-ziyuan"></view>
-      <view class="text">当前版本</view>
+      <view class="iconfont icon-ziyuan" ></view>
+      <!-- <view class="text">当前版本</view> -->
+      <button open-type=""  plain="true" size="mini">当前版本</button>
     </view>
     <view class="right">v4.1.1</view>
   </view>

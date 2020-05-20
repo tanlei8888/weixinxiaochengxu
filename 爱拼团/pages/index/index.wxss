@@ -17,8 +17,8 @@
   align-items: center;
 }
 .navIcon image {
-  width: 120rpx;
-  height: 120rpx;
+  width: 150rpx;
+  height: 150rpx;
 }
 .wear {
   margin-bottom: 30rpx;

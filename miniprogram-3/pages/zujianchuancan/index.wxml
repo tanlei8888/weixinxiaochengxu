@@ -1,0 +1,3 @@
+<tabs tabItems="{{tabs}}" bindmytap="onMyTab" >
+  <!-- 内容-这里可以放插槽 -->
+</tabs>

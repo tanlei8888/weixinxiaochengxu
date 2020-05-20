@@ -1,13 +1,13 @@
 {
   "pages":[
-    
+    "pages/zujianchuancan/index",
     "pages/aipingtuan/index",
+    "pages/99乘法表/99乘法表",
     "pages/swiper/swiper",
     "pages/navgator/index",
     "pages/add/add",
     "pages/buttonPlay/index",
     "pages/boss表头/boss表头",
-    "pages/99乘法表/99乘法表",
     "pages/华仔/华仔",
     "pages/计程车收费/计程车收费",
     "pages/tabBar/tabBar",
