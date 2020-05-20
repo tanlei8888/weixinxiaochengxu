@@ -1,0 +1,5 @@
+<view class="navIcon">
+  <block wx:for="{{catItems}}" wx:key="image_src">
+    <image mode="aspectFit" src="{{item.image_src}}"></image>
+  </block>
+</view>

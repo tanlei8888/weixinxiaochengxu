@@ -1,0 +1,18 @@
+.wear {
+  margin-bottom: 30rpx;
+}
+.wear text {
+  padding-left: 10rpx;
+  color: pink;
+}
+.wear .wear-img {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.wear .wear-img image {
+  width: 230rpx;
+  height: 170px;
+  padding: 10rpx 0;
+}

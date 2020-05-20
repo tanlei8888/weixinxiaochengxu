@@ -144,7 +144,7 @@ Page({
         "status": 200
       }
     }
-    // console.log(floorData.message[0].floor_title)
+    // console.log(floorData.message.floor_title)
     this.setData({
       floorData: floorData.message
     })

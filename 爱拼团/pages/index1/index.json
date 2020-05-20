@@ -1,6 +1,8 @@
 {
   "usingComponents": {
-    
+    "_userInfo":"/components/_userInfo/_userInfo",
+    "myorder":"/components/myorder/myorder",
+    "_system":"/components/_system/_system"
   },
   "navigationBarTitleText": "我的"
 

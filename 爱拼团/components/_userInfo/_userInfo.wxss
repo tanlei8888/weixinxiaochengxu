@@ -1,0 +1,36 @@
+.btnContainer{
+  height: 300rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100rpx;
+  position: relative;
+}
+.btnContainer .btn{
+  border: 1px solid #E64340;
+  color: #E64340;
+  background-color: white;
+}
+.btnContainer .userBg .img{
+  width: 750rpx;
+  height: 300rpx;
+  filter: blur(28rpx);
+}
+.btnContainer .userHeaderimg{
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.btnContainer .userHeaderimg .img{
+  border-radius: 50%;
+  height: 150rpx;
+  width: 150rpx;
+}
+.btnContainer  .myName{
+  position: absolute;
+  color: white;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+}

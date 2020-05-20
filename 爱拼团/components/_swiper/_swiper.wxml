@@ -1,0 +1,14 @@
+<view class="swiperBOx">
+  <swiper
+  indicator-active-color="white"
+  indicator-color="black"
+  indicator-dots="true"
+  interval="2000"
+  autoplay="true"
+  circular="true"
+>
+  <swiper-item wx:for="{{swiper_list}}" wx:key="image_src">
+    <image mode="aspectFill" src="{{item.img_src}}"></image>
+  </swiper-item>
+  </swiper>
+</view>

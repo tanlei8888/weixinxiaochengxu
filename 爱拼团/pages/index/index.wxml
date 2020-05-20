@@ -1,32 +1,8 @@
-
+<!-- searchInput -->
 <search-input title="搜索"/>
 <!-- 轮播图 -->
-<view class="swiperBOx">
-  <swiper
-  indicator-active-color="white"
-  indicator-color="black"
-  indicator-dots="true"
-  interval="2000"
-  autoplay="true"
-  circular="true"
->
-  <swiper-item wx:for="{{swiper_list}}" wx:key="image_src">
-    <image mode="aspectFill" src="{{item.img_src}}"></image>
-  </swiper-item>
-  </swiper>
-</view>
+<_swiper swiper_list="{{swiper_list}}"/>
 <!-- 导航分类 -->
-<view class="navIcon">
-  <block wx:for="{{catItems}}" wx:key="image_src">
-    <image mode="aspectFit" src="{{item.image_src}}"></image>
-  </block>
-</view>
+<navIcon catItems="{{catItems}}"/>
 <!-- 服装时尚 -->
-<view class="wear">
-  <text>{{floorData[0].floor_title.name}}</text>
-  <view class="wear-img">
-  <block wx:for="{{floorData[0].product_list}}" wx:key="image_src">
-    <image  mode="aspectFill" src="{{item.image_src}}"></image>
-  </block>
-  </view>
-</view>
+<_wear floorData="{{floorData[0].product_list}}"/>

@@ -1,0 +1,18 @@
+<view class="apt-my-orderFunc">
+  <view class="orderFunc-item">
+    <view class="iconfont icon-icon-test"></view>
+    <view class="text">代收款</view>
+  </view>
+  <view class="orderFunc-item">
+    <view class="iconfont icon-daishouhuo"></view>
+    <view class="text">待收货</view>
+  </view>
+  <view class="orderFunc-item">
+    <view class="iconfont icon-tuikuan"></view>
+    <view class="text">退货/退款</view>
+  </view>
+  <view class="orderFunc-item">
+    <view class="iconfont icon-quanbudingdan"></view>
+    <view class="text">全部订单</view>
+  </view>
+</view>

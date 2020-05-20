@@ -1,5 +1,8 @@
 {
   "usingComponents": {
-    "search-input":"/components/searchInput/searchInput"
+    "search-input":"/components/searchInput/searchInput",
+    "_swiper":"/components/_swiper/_swiper",
+    "navIcon":"/components/navIcon/navIcon",
+    "_wear":"/components/_wear/_wear"
   }
 }

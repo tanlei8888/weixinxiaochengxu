@@ -7,7 +7,7 @@ Page({
   data: {
     userInfo:[]
   },
-  getUserInfoFunc: function(e) {
+  mytab: function(e) {
     console.log(e)
     let userInfo = e.detail.userInfo
     this.setData({
@@ -20,7 +20,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    
   },
 
   /**
@@ -34,6 +34,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function (e) {
+    console.log(wx.getStorageSync("userInfo"))
       let userInfo = wx.getStorageSync("userInfo")
       this.setData({
         userInfo:userInfo

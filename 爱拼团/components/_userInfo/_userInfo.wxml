@@ -1,0 +1,16 @@
+<view class="btnContainer">
+  <block wx:if="{{userInfo.nickName}}">
+    <view class="userBg">
+      <image class="img" src="{{userInfo.avatarUrl}}"></image>
+    </view>
+    <view class="userHeaderimg">
+      <image class="img" src="{{userInfo.avatarUrl}}"></image>
+    </view>
+    <view class="myName">
+    {{userInfo.nickName}}
+    </view>
+  </block>
+  <block wx:else>
+    <button class="btn" open-type="getUserInfo" bindgetuserinfo="getUserInfoFunc">登录</button>
+  </block>
+</view>

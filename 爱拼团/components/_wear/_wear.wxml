@@ -1,0 +1,8 @@
+<view class="wear">
+  <text>{{floorData[0].floor_title.name}}</text>
+  <view class="wear-img">
+  <block wx:for="{{floorData}}" wx:key="image_src">
+    <image  mode="aspectFill" src="{{item.image_src}}"></image>
+  </block>
+  </view>
+</view>

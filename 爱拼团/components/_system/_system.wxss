@@ -1,0 +1,26 @@
+@import"/styles/iconfont.wxss";
+.apt-my-systemFunc{
+  width: 96%;
+  margin: 0 auto;
+}
+.systemFunc-item{
+  height: 100rpx;
+  border-bottom: 2rpx solid #c8c8c8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.systemFunc-item .left{
+  width: 300rpx;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /* padding-left: 20rpx; */
+}
+.systemFunc-item .left button{
+  border: none;
+  margin: 0;
+}
+.systemFunc-item .right{
+  padding-right: 40rpx;
+}
