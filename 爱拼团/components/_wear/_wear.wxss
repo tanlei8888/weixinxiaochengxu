@@ -11,8 +11,8 @@
   align-items: center;
   flex-wrap: wrap;
 }
-.wear .wear-img image {
-  width: 230rpx;
-  height: 170px;
+.wear .wear-img .imgBox {
+  width: 32%;
+  height: 230rpx;
   padding: 10rpx 0;
 }

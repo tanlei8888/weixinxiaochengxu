@@ -7,7 +7,7 @@ Page({
   data: {
     userInfo:[]
   },
-  mytab: function(e) {
+  getUserInfoFunc: function(e) {
     console.log(e)
     let userInfo = e.detail.userInfo
     this.setData({
