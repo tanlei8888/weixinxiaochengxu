@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "_swiper":"/components/_swiper/_swiper",
+    "_theme":"/components/_theme/_theme",
+    "_newest":"/components/_newest/_newest"
+  }
+}

@@ -1,0 +1,6 @@
+<!-- 轮播图 -->
+<_swiper swiper_list="{{swiper_list}}"/>
+<!-- 精选主题 -->
+<_theme themeData="{{themeData}}" bindmytab="mytab"/>
+<!-- 最新新品 -->
+<_newest newestData="{{newestData}}"/>

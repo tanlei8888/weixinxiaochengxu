@@ -1,0 +1,30 @@
+<view class="product">
+  <view class="product-img">
+    <image src="{{productData.imageUrl}}"></image>
+  </view>
+  <view class="btn">
+    <view class="left">
+      <view >{{"数量"+count+productData.unit}}</view>
+      <view class="addBtn" bindtap="addProduct">+</view>
+    </view>
+    <view class="right">
+      <view>加入购物车</view>
+      <view class="car" bindtap="joinCar">
+        <image src="/image/cart-o.png"></image>
+      </view>
+    </view>
+  </view>
+  <view class="xiangqing">{{productData.stock}}</view>
+  <view class="xiangqing">{{productData.title}}</view>
+  <view class="xiangqing">{{"¥"+productData.price}}</view>
+  <view class="options">
+    <view class="option">
+      <text>商品详情</text>
+      <text>产品参数</text>
+      <text>售后保障</text>
+    </view>
+    <view class="txt">
+      <text>{{productData.detail}}</text>
+    </view>
+  </view>
+</view>

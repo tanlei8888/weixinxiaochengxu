@@ -1,0 +1,29 @@
+<view class="cate">
+
+  <view class="left">
+    <block wx:for="{{cateData}}"wx:key="item">
+      <view class="{{ index==i?'active':''}}"
+      bindtap="handleClick" data-index="{{index}}">{{item.cate}}</view>
+    </block>
+  </view>
+
+  <view class="right">
+    <view class="banner" bindtap="handleUrl">
+      <image mode="aspectFill" src="{{rightContent.banner}}"></image>
+    </view>
+    <view class="txt">{{"——"+" "+rightContent.cate+" "+"——"}}</view>
+    <view class="cateContainer">
+      <block wx:for="{{rightContent.detail}}"wx:key="_item">
+        <navigator 
+        open-type="navigate"
+        url="/pages/ProductDetail/index?id={{item.id}}"
+        class="cate-item">
+          <view class="cate-imgBox">
+            <image class="cate-img" mode="aspectFill" src="{{item.thumb}}"></image>
+          </view>
+          <view>{{item.name}}</view>
+        </navigator>
+    </block>
+    </view>
+  </view>
+</view>

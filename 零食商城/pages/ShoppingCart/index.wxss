@@ -1,0 +1,67 @@
+.ShoppingCart .cate-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 200rpx;
+  border-bottom: 1px solid #f1f1f1;
+}
+.ShoppingCart .cate-item .cate-icon {
+  padding: 20rpx;
+}
+.ShoppingCart .cate-item .cateInfo {
+  height: 200rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20rpx 0;
+}
+.ShoppingCart .cate-item .cateInfo .count {
+  width: 200rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.ShoppingCart .cate-item .price {
+  width: 20%;
+  height: 200rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20rpx 0;
+}
+.ShoppingCart .bottom {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100rpx;
+  background-color: #ab946d;
+}
+.ShoppingCart .bottom .left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ShoppingCart .bottom .left .txt {
+  color: white;
+}
+.ShoppingCart .bottom .left .group {
+  padding: 0 10rpx;
+}
+.ShoppingCart .bottom .right {
+  display: flex;
+  padding-right: 30rpx;
+}
+.ShoppingCart .bottom .right .right-img {
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: 30rpx;
+}
+.ShoppingCart .bottom .right .txt {
+  color: white;
+}

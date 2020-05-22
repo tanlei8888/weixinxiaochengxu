@@ -1,0 +1,37 @@
+.newest {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 750rpx;
+  flex-direction: column;
+}
+.newest .txt {
+  width: 100%;
+  text-align: center;
+  height: 100rpx;
+  line-height: 100rpx;
+  color: #c9ba9c;
+}
+.newest .newest-itme {
+  display: flex;
+  flex-wrap: wrap;
+}
+.newest .newest-itme .newest-img {
+  width: 340rpx;
+  margin-left: 25rpx;
+  margin-bottom: 20rpx;
+  border-radius: 10rpx;
+  height: 350rpx;
+  background-color: #f5f6f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.newest .newest-itme .newest-img .item-img {
+  width: 200rpx;
+  height: 200rpx;
+}
+.newest .newest-itme .newest-img text {
+  color: black;
+}

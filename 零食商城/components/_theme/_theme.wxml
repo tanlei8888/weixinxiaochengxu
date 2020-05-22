@@ -1,0 +1,13 @@
+<view class="theme" wx:for="{{themeData}}"wx:key="item">
+  <view class="theme-txt"><text>{{item.themeData_title.name}}</text></view>
+  <view class="theme-image">
+    <block wx:for="{{item.themeData_list}}"wx:key="image_src">
+      <!-- <navigator "{{item.open_type}}" url="{{item.navigator_url}}"> -->
+        <view class="imgBox" bindtap="handleClick" data-index="{{index}}">
+        <image class="img-item" mode="aspectFill" src="{{item.image_src}}"></image>
+        </view>
+      <!-- </navigator> -->
+    </block>
+  </view>
+</view>
+

@@ -1,0 +1,16 @@
+
+<view class="newest">
+  <view class="txt">最新新品</view>
+  <view class="newest-itme">
+    <block wx:for="{{newestData}}"wx:key="item">
+      <navigator 
+      open-type="navigate"
+      url="../../pages/ProductDetail/index?id={{item.id}}"
+      class="newest-img">
+        <image class="item-img" src="{{item.imageUrl}}"></image>
+        <text>{{item.title}}</text>
+        <text>{{item.price}}</text>
+      </navigator>
+    </block>
+  </view>
+</view>

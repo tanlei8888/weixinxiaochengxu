@@ -1,0 +1,39 @@
+<view class="ShoppingCart">
+  <block wx:for="{{getData}}"wx:key="item">
+      <!-- 商品信息 -->
+    <view class="cate-item">
+      <view class="cate-icon">
+        <checkbox class="checkbox"></checkbox>
+      </view>
+      <view class="cateInfo">
+        <text>{{item.title+" "+item.count+item.unit}}</text>
+        <view class="count">
+          <text bindtap="reduceCount"> - </text>
+          <text> {{item.count}} </text>
+          <text bindtap="addCount"> + </text>
+        </view>
+      </view>
+      <view class="price">
+          <text>{{"¥"+item.price}}</text>
+          <text>x</text>
+      </view>
+    </view>
+  </block>
+
+  <view class="bottom">
+  <!-- 左边样式 -->
+    <view class="left">
+       <view class="group">
+          <checkbox class="checkbox"></checkbox>
+      </view>
+      <text class="txt">全选</text>
+    </view>
+  <!-- 右边样式 -->
+    <view class="right">
+      <text class="txt">{{}}123123</text>
+      <view class="right-img">
+        <image src="/image/icon3.png"></image>
+      </view>
+    </view>
+  </view>
+</view>

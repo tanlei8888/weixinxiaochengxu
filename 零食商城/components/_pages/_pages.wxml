@@ -1,0 +1,15 @@
+<view class="banner">
+  <image class="bannerImg" mode="aspectFill" src="{{newestData.bannerList}}"></image>
+</view>
+<view class="newest">
+    <block wx:for="{{newestData.shopList}}"wx:key="imageUrl">
+      <navigator class="newest-img"
+      open-type="navigate"
+      url="/pages/ProductDetail/index?id={{item.id}}"
+      >
+        <image class="item-img" src="{{item.imageUrl}}"></image>
+        <text class="txt">{{item.title}}</text>
+        <text class="txt">¥ {{item.price}}</text>
+      </navigator>
+    </block>
+</view>
