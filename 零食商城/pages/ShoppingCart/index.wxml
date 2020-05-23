@@ -8,13 +8,13 @@
       <view class="cateInfo">
         <text>{{item.title+" "+item.count+item.unit}}</text>
         <view class="count">
-          <text bindtap="reduceCount"> - </text>
-          <text> {{item.count}} </text>
-          <text bindtap="addCount"> + </text>
+          <text data-index="{{index}}" bindtap="reduceCount"> - </text>
+          <text> {{item.i}} </text>
+          <text data-index="{{index}}" bindtap="addCount"> + </text>
         </view>
       </view>
       <view class="price">
-          <text>{{"¥"+item.price}}</text>
+          <text>{{"¥"+item.money}}</text>
           <text>x</text>
       </view>
     </view>

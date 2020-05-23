@@ -8,7 +8,9 @@ let guazi = {
   stock:"有货",
   detail:"这是瓜子商品详情信息",
   parameter:"1元/斤",
-  service:"一经售出概不退换货"
+  service:"一经售出概不退换货",
+  i:1,
+  money:'0.01'
 }
 let qincai = {
   id: 'qincai',
@@ -20,7 +22,9 @@ let qincai = {
   stock: "有货",
   detail: "这是芹菜商品详情信息",
   parameter: "0.2元/斤",
-  service: "不支持退换货"
+  service: "不支持退换货",
+  i:1,
+  money:'0.02'
 }
 let sumi = {
   id: 'sumi',
@@ -32,7 +36,9 @@ let sumi = {
   stock: "有货",
   detail: "这是素米商品详情信息",
   parameter: "0.03元/g",
-  service: "一经售出概不退换货"
+  service: "一经售出概不退换货",
+  i:1,
+  money:'0.03'
 }
 let hongzao = {
   id: 'hongzao',
@@ -44,7 +50,9 @@ let hongzao = {
   stock: "有货",
   detail: "这是红枣商品详情信息",
   parameter: "0.08元/g",
-  service: "不支持退换货"
+  service: "不支持退换货",
+  i:1,
+  money:'0.08'
 }
 let qiyiguo = {
   id: 'qiyiguo',
@@ -56,7 +64,9 @@ let qiyiguo = {
   stock: "无货",
   detail: "这是奇异果商品详情信息",
   parameter: "100g/个",
-  service: "一经售出概不退换货"
+  service: "一经售出概不退换货",
+  i:1,
+  money:'1.08'
 }
 let lihuaguo = {
   id: 'lihuaguo',
@@ -68,7 +78,9 @@ let lihuaguo = {
   stock: "无货",
   detail: "这是奇异果商品详情信息",
   parameter: "128g/个",
-  service: "一经售出概不退换货"
+  service: "一经售出概不退换货",
+  i:1,
+  money:'0.55'
 }
 
 module.exports={

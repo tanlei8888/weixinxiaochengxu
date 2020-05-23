@@ -5,27 +5,57 @@ Page({
    * 页面的初始数据
    */
   data: {
-    getData:[]
-    
+    getData:[],
+    // index:null,
+    // countArr:[],
+    price:0
   },
   
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // console.log(this.data.getData)
+    // 页面加载时获取本地储存数据
     let getData = wx.getStorageSync('cate')
+    getData.map((e,i)=>{
+      console.log(e.price*e.i)
+    })
     this.setData({
       getData:getData
     })
+    // console.log(this.data.getData)
   },
   //减少点击事件
   reduceCount:function(e){
-    // this.data.
+    // console.log(e)
+    let getData = wx.getStorageSync('cate')
+    let index = e.currentTarget.dataset.index
+      if(getData[index].i > 1){
+        getData[index].i--
+      }
+      // console.log(getData[index].money)
+      getData[index].money = getData[index].price* getData[index].i
+      // console.log(getData[index].price)
+      // console.log(getData[index].i)
+    wx.setStorageSync('cate', getData)
+    this.setData({
+      getData:getData,
+    })
   },
   //增加点击事件
   addCount:function(e){
-
+    // console.log(e)
+    let getData = wx.getStorageSync('cate')
+    let index = e.currentTarget.dataset.index
+      getData[index].i++
+      // console.log(getData[index].money)
+      getData[index].money = getData[index].price* getData[index].i
+      // console.log(getData[index].price)
+      // console.log(getData[index].i)
+    wx.setStorageSync('cate', getData)
+    this.setData({
+      getData:getData,
+    })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

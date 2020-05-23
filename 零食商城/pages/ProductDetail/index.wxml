@@ -1,10 +1,11 @@
 <view class="product">
+  <text>{{count}}</text>
   <view class="product-img">
     <image src="{{productData.imageUrl}}"></image>
   </view>
   <view class="btn">
     <view class="left">
-      <view >{{"数量"+count+productData.unit}}</view>
+      <view >{{"数量"+productData.count+productData.unit}}</view>
       <view class="addBtn" bindtap="addProduct">+</view>
     </view>
     <view class="right">
