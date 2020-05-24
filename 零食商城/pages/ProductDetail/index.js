@@ -31,22 +31,36 @@ Page({
     this.setData({
       arr:getData
     })
-    //push 进去新获取到的商品json
-    this.data.arr.push(this.data.productData)
+    //利用id判断本地储存内是否已经储存该商品
+    let i = getData.findIndex(e=>e.id === this.data.productData.id)
+    //-1 表示不存在 push进本地储存
+    if(i === -1){
+      // this.data.arr.push(this.data.productData)
+      getData.push(this.data.productData)
+    }else{
+     //已经存在该商品 只添加数量至购物车
+      getData[i].i = getData[i].i +this.data.count
+      getData[i].money = getData[i].i * getData[i].price
+    }
     //储存最新的本地储存数据
-    wx.setStorageSync('cate', this.data.arr)
+    wx.setStorageSync('cate', getData)
   },
+
   //添加数量按钮
   addProduct:function(e){
     //每次点击数量增加
-    this.data.productData.i++
-    //每次点击 改变 通过 id 获取到的这个商品的总价money数据，单价乘以数量 
-    this.data.productData.money = this.data.productData.i*this.data.productData.price
+    let count = this.data.count
+    ++count
+    
     //把每次增加的 i set到全局属性渲染标签
     this.setData({
-      count:this.data.productData.i
+      count
     })
+    //每次点击 改变 通过 id 获取到的这个商品的总价money数据，单价乘以数量 
+    this.data.productData.money = (this.data.count*this.data.productData.price).toFixed(2)
+    console.log(this.data.productData.money)
   },
+
   /**
    * 生命周期函数--监听页面加载
    */
@@ -56,7 +70,7 @@ Page({
       id: options.id
     })
     this.fn()
-    // console.log(this.data.productData)
+    console.log(this.data.productData)
     // console.log(this.data.count)
   },
 
@@ -73,9 +87,9 @@ Page({
   onShow: function () {
     // let productData = require("../../data/details-data")
     // let carData = this.data.id
-    // this.setData({
-    //   productData:productData[carData]
-    // })
+    this.setData({
+      count:1
+    })
   },
 
   /**

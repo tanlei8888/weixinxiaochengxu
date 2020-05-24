@@ -10,7 +10,8 @@ let guazi = {
   parameter:"1元/斤",
   service:"一经售出概不退换货",
   i:1,
-  money:'0.01'
+  money:'0.01',
+  checked:true
 }
 let qincai = {
   id: 'qincai',
@@ -24,7 +25,8 @@ let qincai = {
   parameter: "0.2元/斤",
   service: "不支持退换货",
   i:1,
-  money:'0.02'
+  money:'0.02',
+  checked:true
 }
 let sumi = {
   id: 'sumi',
@@ -38,7 +40,8 @@ let sumi = {
   parameter: "0.03元/g",
   service: "一经售出概不退换货",
   i:1,
-  money:'0.03'
+  money:'0.03',
+  checked:true
 }
 let hongzao = {
   id: 'hongzao',
@@ -52,7 +55,8 @@ let hongzao = {
   parameter: "0.08元/g",
   service: "不支持退换货",
   i:1,
-  money:'0.08'
+  money:'0.08',
+  checked:true
 }
 let qiyiguo = {
   id: 'qiyiguo',
@@ -66,7 +70,8 @@ let qiyiguo = {
   parameter: "100g/个",
   service: "一经售出概不退换货",
   i:1,
-  money:'1.08'
+  money:'1.08',
+  checked:true
 }
 let lihuaguo = {
   id: 'lihuaguo',
@@ -80,7 +85,8 @@ let lihuaguo = {
   parameter: "128g/个",
   service: "一经售出概不退换货",
   i:1,
-  money:'0.55'
+  money:'0.55',
+  checked:true
 }
 
 module.exports={

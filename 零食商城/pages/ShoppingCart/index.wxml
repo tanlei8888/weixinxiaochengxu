@@ -3,7 +3,7 @@
       <!-- 商品信息 -->
     <view class="cate-item">
       <view class="cate-icon">
-        <checkbox class="checkbox"></checkbox>
+        <checkbox  data-index="{{index}}" class="checkbox" checked="{{item.checked == true ? true : false}}" bindtap="checkedToogle"></checkbox>
       </view>
       <view class="cateInfo">
         <text>{{item.title+" "+item.count+item.unit}}</text>
@@ -15,7 +15,7 @@
       </view>
       <view class="price">
           <text>{{"¥"+item.money}}</text>
-          <text>x</text>
+          <text data-index="{{index}}" bindtap="removeCate">x</text>
       </view>
     </view>
   </block>
@@ -24,13 +24,13 @@
   <!-- 左边样式 -->
     <view class="left">
        <view class="group">
-          <checkbox class="checkbox"></checkbox>
+          <checkbox class="checkbox" checked="{{checked}}" bindtap="checkedAll"></checkbox>
       </view>
       <text class="txt">全选</text>
     </view>
   <!-- 右边样式 -->
     <view class="right">
-      <text class="txt">{{}}123123</text>
+      <text class="txt">{{price}}</text>
       <view class="right-img">
         <image src="/image/icon3.png"></image>
       </view>
