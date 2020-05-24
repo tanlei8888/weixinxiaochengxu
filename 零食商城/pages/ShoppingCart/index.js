@@ -33,10 +33,13 @@ Page({
   checkedToogle:function(e){
     let index = e.currentTarget.dataset.index
     let getData = wx.getStorageSync('cate');
+    //如果这个商品的checked是真那么变为假如果是假变为真
     getData[index].checked === true ? getData[index].checked = false : getData[index].checked = true 
+    //是否所有商品都被选中 选中返回0 否则返回-1
+    let flag = getData.findIndex(e => e.checked === true) === 0 ? true : false
     wx.setStorageSync('cate', getData)
-    // console.log(getData[index].checked)
     let money = 0
+    //被选中的商品价格计算
     getData.forEach((e,i)=>{
       if(e.checked === true){
         money += +e.money
@@ -44,20 +47,11 @@ Page({
     })
     this.setData({
       getData:getData,
-      price:money.toFixed(2)
+      price:money.toFixed(2),
+      checked:flag
     })
-    //判断是否全选
-    // this.data.checked === true ? this.setData({checked:false}) : this.setData({checked:true})
-    let flag = getData.findIndex(e => e.checked === true)
-    if(flag === -1){
-      this.setData({
-        checked:false
-      })
-    }else{
-      this.setData({
-        checked:true
-      })
-    }
+    console.log(flag)
+    console.log(index)
   },
   //减少点击事件
   reduceCount:function(e){
