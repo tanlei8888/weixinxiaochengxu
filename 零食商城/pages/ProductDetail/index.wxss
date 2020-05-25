@@ -77,8 +77,8 @@
   height: 100%;
 }
 .product .xiangqing {
-  height: 150rpx;
-  line-height: 150rpx;
+  height: 120rpx;
+  line-height: 120rpx;
 }
 .product .options {
   width: 100%;
@@ -86,8 +86,25 @@
 }
 .product .options .option {
   width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   color: #c7c7cb;
+  border-bottom: 1px solid #dedede;
+}
+.product .options .option text{
+  flex: 1;
+  text-align: center;
+}
+.product .options .txt{
+  height: 200rpx;
+  line-height: 200rpx;
+  padding: 20rpx;
+  font-size: 28rpx;
+}
+.product .options .option .avtive{
+  color: #AA976C;
+  border-bottom: 1rpx solid #AA976C;
 }

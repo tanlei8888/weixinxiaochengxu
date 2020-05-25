@@ -1,8 +1,13 @@
 <view class="product">
-  <view class="carImg">
+
+  <navigator class="carImg"
+  bindtap="joinCar"
+  url='/pages/ShoppingCart/index' 
+  open-type="navigate"
+  >
     <image class="img" src="/image/cart.png"></image>
     <text>{{count}}</text>
-  </view>
+  </navigator>
   <view class="product-img">
     <image src="{{productData.imageUrl}}"></image>
   </view>
@@ -22,13 +27,15 @@
   <view class="xiangqing">{{productData.title}}</view>
   <view class="xiangqing">{{"¥"+productData.price}}</view>
   <view class="options">
-    <view class="option">
-      <text>商品详情</text>
-      <text>产品参数</text>
-      <text>售后保障</text>
+    <view class="option" catchtap="handleChange">
+      <text data-tab="detail" class="{{activeTab === 'detail' ? 'avtive' :'' }}">商品详情</text>
+      <text data-tab="parameter" class="{{activeTab === 'parameter' ? 'avtive' :''}}">产品参数</text>
+      <text data-tab="service" class="{{activeTab === 'service' ? 'avtive' : ''}}">售后保障</text>
     </view>
     <view class="txt">
-      <text>{{productData.detail}}</text>
+      <text wx:if="{{activeTab === 'detail'}}">{{productData.detail}}</text>
+      <text wx:if="{{activeTab === 'parameter'}}">{{productData.parameter}}</text>
+      <text wx:if="{{activeTab === 'service'}}">{{productData.service}}</text>
     </view>
   </view>
 </view>

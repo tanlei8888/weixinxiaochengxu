@@ -1,11 +1,11 @@
 {
   "pages":[
-    "pages/myInfo/index",
+    "pages/index/index",
     "pages/ShoppingCart/index",
+    "pages/ProductDetail/index",
+    "pages/myInfo/index",
     "pages/pay/pay",
     "pages/address/address",
-    "pages/index/index",
-    "pages/ProductDetail/index",
     "pages/cateDetail/index",
     "pages/chaohuo/index",
     "pages/guowei/index",

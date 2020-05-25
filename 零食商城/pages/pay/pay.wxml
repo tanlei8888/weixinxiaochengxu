@@ -23,7 +23,8 @@
       添加收货地址
     </block>
   </navigator>
-  <view class="snack-pay-list">
+  <scroll-view scroll-y class="snack-pay-list" >
+    <!-- <view class="snack-pay-list"> -->
     <view class="list-item" wx:for="{{getData}}" wx:key="index">
       <view class="left">
         <image src="{{item.imageUrl}}" mode="widthFix"></image>
@@ -34,7 +35,8 @@
         <view class="title">{{'x'+item.i}}</view>
       </view>
     </view>
-  </view>
+    <!-- </view> -->
+  </scroll-view>
   <view class="snake-pay-bottom">
     <view class="left">
     <text>付款合计:</text><text>{{'¥'+price}}</text>
