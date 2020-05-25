@@ -1,9 +1,12 @@
 {
   "pages":[
+    "pages/myInfo/index",
     "pages/ShoppingCart/index",
+    "pages/pay/pay",
+    "pages/address/address",
+    "pages/index/index",
     "pages/ProductDetail/index",
     "pages/cateDetail/index",
-    "pages/index/index",
     "pages/chaohuo/index",
     "pages/guowei/index",
     "pages/dianxin/index",
@@ -32,7 +35,7 @@
       "iconPath": "image/cart.png",
       "selectedIconPath": "image/cart-o.png"
     },{
-      "pagePath": "pages/index/index",
+      "pagePath": "pages/myInfo/index",
       "text": "我的",
       "iconPath": "image/my.png",
       "selectedIconPath": "image/my-o.png"

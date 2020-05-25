@@ -1,0 +1,6 @@
+<view >
+  <button
+  class="address"
+  bindtap="getAddress"
+  >获取当前位置</button>
+</view>

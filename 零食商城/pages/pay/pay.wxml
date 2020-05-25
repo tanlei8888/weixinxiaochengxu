@@ -1,0 +1,47 @@
+<view class="snack-pay">
+  <navigator
+  class="snak-pay-address" 
+  url='/pages/address/address' 
+  open-type="navigate">
+    <block wx:if="{{address.userName}}">
+      <view class="top">
+        <view class="left">
+          <text>收货人:</text>
+          <text>{{address.userName}}</text>
+        </view>
+        <view class="right">
+          <text class="tel">电话:</text>
+          <text>{{address.telNumber}}</text>
+        </view>
+      </view>
+      <view class="bottom">
+        <text>{{address.provinceName+address.cityName+address.countyName+address.detailInfo+','}}</text>
+        <text>邮编:{{address.postalCode}}</text>
+      </view>
+    </block>
+    <block wx:else>
+      添加收货地址
+    </block>
+  </navigator>
+  <view class="snack-pay-list">
+    <view class="list-item" wx:for="{{getData}}" wx:key="index">
+      <view class="left">
+        <image src="{{item.imageUrl}}" mode="widthFix"></image>
+      </view>
+      <view class="right">
+        <view class="title">{{item.title}}</view>
+        <view class="price">{{'¥'+item.money}}</view>
+        <view class="title">{{'x'+item.i}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="snake-pay-bottom">
+    <view class="left">
+    <text>付款合计:</text><text>{{'¥'+price}}</text>
+    </view>
+    <view class="right" bindtap="payClick">
+      去付款
+    </view>
+  </view>
+</view>
+

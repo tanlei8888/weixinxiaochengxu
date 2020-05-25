@@ -1,3 +1,7 @@
+.ShoppingCart .empty {
+  text-align: center;
+  margin: 50% auto;
+}
 .ShoppingCart .cate-item {
   display: flex;
   justify-content: space-between;

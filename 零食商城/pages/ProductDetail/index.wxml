@@ -1,5 +1,8 @@
 <view class="product">
-  <text>{{count}}</text>
+  <view class="carImg">
+    <image class="img" src="/image/cart.png"></image>
+    <text>{{count}}</text>
+  </view>
   <view class="product-img">
     <image src="{{productData.imageUrl}}"></image>
   </view>

@@ -1,4 +1,35 @@
 .product {
+  position: relative;
+    .carImg{
+      position: relative;
+      position: absolute;
+      right: 30rpx;
+      top: 30rpx;
+      width: 100rpx;
+      height: 100rpx;
+      border-radius: 50%;
+      .img{
+        position: absolute;
+        right: 0;
+        width: 80rpx;
+        height: 80rpx;
+        border-radius: 50%;
+      }
+      text{
+        top: 0;
+        left: 0;
+        position: absolute;
+        display: block;
+        text-align: center;
+        line-height: 40rpx;
+        font-size: 26rpx;
+        width: 40rpx;
+        height: 40rpx;
+        border-radius: 50%;
+        color: white;
+        background-color: #ab946d;
+      }
+    }
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -46,8 +77,8 @@
       }
     }
     .xiangqing{
-        height: 200rpx;
-        line-height: 200rpx;
+        height: 150rpx;
+        line-height: 150rpx;
     }
     .options {
         width: 100%;

@@ -1,0 +1,108 @@
+.myInfo .myInfo-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 150rpx;
+  padding: 30rpx;
+  background-color: #a8986e;
+}
+.myInfo .myInfo-top .myInfo-top-left {
+  height: 100%;
+  padding: 0 20rpx;
+  display: flex;
+  align-items: center;
+}
+.myInfo .myInfo-top .myInfo-top-left .userImg {
+  width: 100rpx;
+  height: 100rpx;
+  margin-right: 30rpx;
+}
+.myInfo .myInfo-top .myInfo-top-left .userImg image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.myInfo .myInfo-top .myInfo-top-left .userName {
+  color: white;
+}
+.myInfo .myInfo-top .myInfo-top-right {
+  color: white;
+}
+.myInfo .myInfo-Address {
+  color: #bebebe;
+}
+.myInfo .myInfo-Address .title {
+  display: block;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  position: relative;
+}
+.myInfo .myInfo-Address .title::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  right: 20rpx;
+  top: 30rpx;
+  width: 15rpx;
+  height: 15rpx;
+  border-top: 5rpx solid black;
+  border-right: 5rpx solid black;
+  transform: rotate(45deg);
+}
+.myInfo .myInfo-Address .addressInfo {
+  padding: 0 10rpx;
+  border-bottom: 10rpx solid #dedede;
+}
+.myInfo .myInfo-Address .addressInfo .address-name {
+  height: 80rpx;
+  line-height: 80rpx;
+  border-top: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
+}
+.myInfo .myInfo-Address .addressInfo .address-tel {
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 1px solid #dedede;
+}
+.myInfo .myInfo-Address .addressInfo .address-position {
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.myInfo .myInfo-order {
+  color: #bebebe;
+}
+.myInfo .myInfo-order .myInfo-order-title {
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  position: relative;
+}
+.myInfo .myInfo-order .order-list {
+  padding: 0 10rpx;
+}
+.myInfo .myInfo-order .order-list .order-code {
+  height: 80rpx;
+  line-height: 80rpx;
+  border-top: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
+}
+.myInfo .myInfo-order .order-list .order-bottom {
+  height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.myInfo .myInfo-order .order-list .order-bottom .order-price {
+  color: black;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.myInfo .myInfo-order .order-list .order-bottom .order-pay {
+  width: 200rpx;
+  text-align: center;
+  background-color: #b42e2d;
+  color: white;
+  height: 80rpx;
+  line-height: 80rpx;
+}

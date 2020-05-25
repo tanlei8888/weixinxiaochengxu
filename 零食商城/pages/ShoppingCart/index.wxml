@@ -1,5 +1,10 @@
 <view class="ShoppingCart">
-  <block wx:for="{{getData}}"wx:key="item">
+  <block wx:if="{{getData.length === 0}}">
+    <view class="empty">
+    很可惜...你还没添加商品哦!!!
+    </view>
+  </block>
+  <block wx:eles wx:for="{{getData}}"wx:key="item">
       <!-- 商品信息 -->
     <view class="cate-item">
       <view class="cate-icon">
@@ -31,9 +36,14 @@
   <!-- 右边样式 -->
     <view class="right">
       <text class="txt">{{price}}</text>
-      <view class="right-img">
-        <image src="/image/icon3.png"></image>
-      </view>
+      <navigator 
+      url="/pages/pay/pay"
+      open-type="navigate"
+      class="right-img">
+        <block wx:if="{{getData.length !== 0}}">
+          <image src="/image/icon3.png"></image>
+        </block>
+      </navigator>
     </view>
   </view>
 </view>

@@ -1,0 +1,118 @@
+.myInfo {
+    .myInfo-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 150rpx;
+        padding: 30rpx;
+        background-color: #a8986e;
+        .myInfo-top-left {
+            height: 100%;
+            padding:0 20rpx;
+            display: flex;
+            // justify-content: center;
+            align-items: center;
+          .userImg {
+              width: 100rpx;
+              height: 100rpx;
+              margin-right: 30rpx;
+            image {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+            }
+          }
+          .userName {
+            color: white;
+          }
+        }
+  
+        .myInfo-top-right {
+            color: white;
+        }
+    }
+  
+    .myInfo-Address {
+        color: #bebebe;
+        // text-align: center;
+      .title {
+          height: 80rpx;
+          line-height: 80rpx;
+        text-align: center;
+        position: relative;
+      }
+      .title::after{
+          content: " ";
+          display: block;
+          position: absolute;
+          right: 20rpx;
+          top: 30rpx;
+          width: 15rpx;
+          height: 15rpx;
+          border-top: 5rpx solid black;
+          border-right: 5rpx solid black;
+          transform: rotate(45deg);
+      }
+  
+      .addressInfo {
+        padding:0 10rpx;
+        border-bottom: 10rpx solid #dedede;
+        .address-name {
+            height: 80rpx;
+            line-height: 80rpx;
+            border-top:1px solid #dedede;
+            border-bottom:1px solid #dedede;
+        }
+  
+        .address-tel {
+            height: 80rpx;
+            line-height: 80rpx;
+            border-bottom:1px solid #dedede;
+        }
+  
+        .address-position {
+            height: 80rpx;
+            line-height: 80rpx;
+        }
+      }
+    }
+  
+    .myInfo-order {
+        color: #bebebe;
+      .myInfo-order-title {
+        height: 80rpx;
+        line-height: 80rpx;
+        text-align: center;
+        position: relative;
+      }
+  
+      .order-list {
+        padding:0 10rpx;
+        .order-code {
+            height: 80rpx;
+            line-height: 80rpx;
+            border-top:1px solid #dedede;
+            border-bottom:1px solid #dedede;
+        }
+        .order-bottom{
+            height: 100rpx;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .order-price {
+                color: black;
+                height: 80rpx;
+                line-height: 80rpx;
+            }
+            .order-pay {
+                width: 200rpx;
+                text-align: center;
+                background-color: #b42e2d;
+                color: white;
+                height: 80rpx;
+                line-height: 80rpx;
+            }
+        }
+      }
+    }
+  }

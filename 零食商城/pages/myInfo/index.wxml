@@ -1,0 +1,54 @@
+<view class="myInfo">
+  <view class="myInfo-top">
+    <block wx:if="{{userInfo.nickName}}">
+      <view class="myInfo-top-left">
+        <view class="userImg">
+          <image mode="widthFix" src="{{userInfo.avatarUrl}}"></image>
+        </view>
+        <view class="userName">{{userInfo.nickName}}</view>
+      </view>
+      <view class="myInfo-top-right">
+        关于我们
+      </view>
+    </block>
+  <block wx:else>
+    <button
+    open-type="getUserInfo"
+    bindgetuserinfo="getUserInfoClick"
+    >获取个人信息</button>
+  </block>
+  </view>
+  <block wx:if="{{address.userName}}">
+    <view class="myInfo-Address">
+      <navigator 
+      class="title"
+      open-type="navigate"
+      url="/pages/address/address"
+      >地址管理</navigator>
+      <view class="addressInfo">
+        <view class="address-name">{{address.userName}}</view>
+        <view class="address-tel">{{address.telNumber}}</view>
+        <view class="address-position">{{address.provinceName+address.cityName+address.countyName+address.detailInfo+","}}
+        邮编:{{address.postalCode}}
+        </view>
+      </view>
+    </view>
+  </block>
+  <block wx:else>
+    <navigator
+    style="text-align:center;width:100%;height:100rpx;line-height:100rpx;border-bottom:1px solid #dedede"
+    open-type="navigate"
+    url="/pages/address/address"
+    >请添加地址</navigator>
+  </block>
+  <view class="myInfo-order">
+    <view class="myInfo-order-title">我的订单</view>
+    <view class="order-list">
+      <view class="order-code">订单编号:A123456</view>
+      <view class="order-bottom">
+        <view class="order-price">实付:¥0</view>
+        <view class="order-pay">付款</view>
+      </view>
+    </view>
+  </view>
+</view>

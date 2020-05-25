@@ -9,6 +9,7 @@ Page({
     getData:[],
     //总价
     price:0.00,
+    //初始全选状态
     checked:false
   },
   
@@ -17,111 +18,121 @@ Page({
    */
   onLoad: function (options) {
     // 页面加载时获取本地储存数据
-    let getData = wx.getStorageSync('cate')
-    let money = 0
-    getData.forEach((e,i)=>{
-      if(e.checked === true){
-        money += +e.money
+    let getData = wx.getStorageSync('cate') || [];
+    //储存修改过后的新数据 重新渲染页面
+    this.saveData(getData)
+  },
+
+  //全选点击事件
+  checkedToogle:function(evnt){
+    let index = evnt.currentTarget.dataset.index
+    let getData = wx.getStorageSync('cate') || [];
+    //如果这个商品的checked是真那么变为假如果是假变为真
+    getData[index].checked === true ? getData[index].checked = false : getData[index].checked = true 
+     //储存修改过后的新数据 重新渲染页面
+     this.saveData(getData)
+    //每次点击判断是否所有商品都被选中
+    let flag;
+    for(let i = 0; i < getData.length; i++){
+      if(!getData[i].checked === true){
+        //如果有一个=== false flag等于false
+        flag = false;
+        break
+      }else{
+        //全部都===true flag等于true
+        flag = true
       }
-    })
+    }
+    //重新渲染页面
     this.setData({
-      getData:getData,
-      price:money.toFixed(2)
+      checked:flag
     })
   },
 
-  checkedToogle:function(e){
-    let index = e.currentTarget.dataset.index
-    let getData = wx.getStorageSync('cate');
-    //如果这个商品的checked是真那么变为假如果是假变为真
-    getData[index].checked === true ? getData[index].checked = false : getData[index].checked = true 
-    //是否所有商品都被选中 选中返回0 否则返回-1
-    let flag = getData.findIndex(e => e.checked === true) === 0 ? true : false
-    wx.setStorageSync('cate', getData)
-    let money = 0
-    //被选中的商品价格计算
-    getData.forEach((e,i)=>{
-      if(e.checked === true){
-        money += +e.money
-      }
-    })
+  //全选点击事件
+  checkedAll:function(e){
+    //获取到初始的data 里的 checked 和 gedata
+    let checked = this.data.checked;
+    let getData = this.data.getData;
+    //每次点击取反 切换
+    checked = !checked
+    //储存全局checked值
     this.setData({
-      getData:getData,
-      price:money.toFixed(2),
-      checked:flag
+      checked:checked
     })
-    console.log(flag)
-    console.log(index)
+    for(let i = 0; i < getData.length; i++){
+      //如果全局checked为false 让全局getdata数组里的每项checked变为fales
+      if(!checked){
+        getData[i].checked = checked;
+      }else{
+        getData[i].checked = checked;
+        }
+    }
+   //储存修改后的新的本地储存 重新渲染
+    this.saveData(getData)
   },
+  
   //减少点击事件
   reduceCount:function(e){
     //获取本地储存数据
-    let getData = wx.getStorageSync('cate')
+    let getData = wx.getStorageSync('cate') || [];
     //获取购物车里被点击的商品下标
     let index = e.currentTarget.dataset.index
       if(getData[index].i > 1){
         getData[index].i--;
       }
     //单个商品总价
-    getData[index].money =( getData[index].price* getData[index].i).toFixed(2)
-    //所有商品总价
-    let money = 0
-    getData.forEach((e,i)=>{
-      money += +e.money
-    })
-    //储存新的改变后的getData 并传给全局data 
-    wx.setStorageSync('cate', getData)
-    this.setData({
-      getData:getData,
-    })
-    //被选中的商品影响总价
-    if( getData[index].checked === true){
-      this.setData({
-        price:money.toFixed(2)
-      })
-    }
-   
-
+    getData[index].money
+    =( getData[index].price * getData[index].i).toFixed(2)
+    //储存修改后的新的本地储存 重新渲染
+    this.saveData(getData)
   },
+
   //增加点击事件
   addCount:function(e){
-    let getData = wx.getStorageSync('cate')
+    let getData = wx.getStorageSync('cate') || [];
     //获取购物车里被点击的商品下标
     let index = e.currentTarget.dataset.index
      getData[index].i++
     //单个商品总价
-    getData[index].money = (getData[index].price* getData[index].i).toFixed(2)
-    //所有商品总价
-    let money = 0
-    getData.forEach((e,i)=>{
-      money += +e.money
-    })
-     //储存新的改变后的getData 并传给全局data 
-    wx.setStorageSync('cate', getData)
-    this.setData({
-      getData:getData
-    })
-     //被选中的商品影响总价
-    if( getData[index].checked === true){
-      this.setData({
-        price:money.toFixed(2)
-      })
-    }
+    getData[index].money
+    = (getData[index].price * getData[index].i).toFixed(2)
+    //储存修改后的新的本地储存 重新渲染
+    this.saveData(getData)
   },
 
   removeCate:function(e){
     //获取购物车里被点击的商品下标
     let index = e.currentTarget.dataset.index
-    let getData = wx.getStorageSync('cate')
-    let price = (this.data.price - getData[index].money).toFixed(2)
+    let getData = wx.getStorageSync('cate') || [];
+    //剪去点击的那个商品
     getData.splice(index,1)
+    //储存修改后的新的本地储存 重新渲染
+    this.saveData(getData)
+    
+    if(getData.length === 0){
+      this.setData({
+        checked:false
+      })
+    }
+  },
+
+  //重新渲染页面函数 储存数据 
+  saveData(getData){
+    let price = 0
+    //每次初次渲染 拿到所有被选中商品的价格
+    getData.forEach((e,i)=>{
+      if(e.checked === true){
+        price += +e.money
+      }
+    })
+    //储存修改后的新的本地储存
     wx.setStorageSync('cate', getData)
     this.setData({
       getData:getData,
-      price
+      price:price.toFixed(2)
     })
   },
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -133,16 +144,22 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    let getData = wx.getStorageSync('cate')
-    let money = 0
-    getData.forEach((e,i)=>{
-      if(e.checked === true){
-        money += +e.money
+    let getData = wx.getStorageSync('cate') || [];
+    let flag ;
+    for(let i = 0; i < getData.length; i++){
+      if(!getData[i].checked === true){
+        //如果有一个=== false flag等于false
+        flag = false;
+        break
+      }else{
+        //全部都===true flag等于true
+        flag = true
       }
-    })
+    }
+    //储存修改后的新的本地储存 重新渲染
+    this.saveData(getData)
     this.setData({
-      getData:getData,
-      price:money.toFixed(2)
+      checked:flag
     })
   },
 
