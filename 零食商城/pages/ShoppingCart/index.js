@@ -91,6 +91,11 @@ Page({
       getData[index].money
       =( getData[index].price * getData[index].i).toFixed(2)
     }
+    if(getData.length === 0){
+      this.setData({
+        checked:false
+      })
+    }
     //储存修改后的新的本地储存 重新渲染
     this.saveData(getData)
   },
@@ -137,8 +142,7 @@ Page({
     wx.setStorageSync('cate', getData)
     this.setData({
       getData:getData,
-      price:price.toFixed(2),
-      checked: getData.length!==0
+      price:price.toFixed(2)
     })
   },
   /**

@@ -6,7 +6,7 @@ let asyncShowModal = function asyncShowModal(content){
         if(res.confirm){
           resolve(res)
         }else{
-          reject(res)
+          console.log("啥事都没发生")
         }
       }
     })
