@@ -68,7 +68,8 @@
   padding-left: 20rpx;
 }
 .snack-pay .snake-pay-bottom .left text {
-  color: #d8bdbc;
+  color: red;
+  opacity: .5;
 }
 .snack-pay .snake-pay-bottom .right {
   width: 200rpx;

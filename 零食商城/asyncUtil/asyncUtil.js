@@ -1,7 +1,7 @@
 let asyncShowModal = function asyncShowModal(content){
   return new Promise(function(resolve,reject){
     wx.showModal({
-      content: 'content',
+      content: content,
       success:function(res){
         if(res.confirm){
           resolve(res)

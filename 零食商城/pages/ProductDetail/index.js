@@ -31,6 +31,7 @@ Page({
         getData[i].i = getData[i].i + this.data.count
         getData[i].money = (getData[i].i * getData[i].price).toFixed(2)
     }
+    
     //接受本地数据
     this.setData({
       arr:getData,

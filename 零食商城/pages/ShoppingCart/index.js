@@ -1,4 +1,5 @@
 // pages/ShoppingCart/index.js
+import {asyncShowModal} from "../../asyncUtil/asyncUtil.js"
 Page({
 
   /**
@@ -73,17 +74,23 @@ Page({
   },
   
   //减少点击事件
-  reduceCount:function(e){
+  reduceCount:async function(e){
     //获取本地储存数据
     let getData = wx.getStorageSync('cate') || [];
     //获取购物车里被点击的商品下标
     let index = e.currentTarget.dataset.index
-      if(getData[index].i > 1){
-        getData[index].i--;
+    // console.log(getData)
+    if(getData[index].i === 1){
+      let res = await asyncShowModal("您确定要删除该商品吗")
+      if(res.confirm){
+        getData.splice(index,1)
       }
-    //单个商品总价
-    getData[index].money
-    =( getData[index].price * getData[index].i).toFixed(2)
+    }else{
+      getData[index].i--;
+      //单个商品总价
+      getData[index].money
+      =( getData[index].price * getData[index].i).toFixed(2)
+    }
     //储存修改后的新的本地储存 重新渲染
     this.saveData(getData)
   },
@@ -130,7 +137,8 @@ Page({
     wx.setStorageSync('cate', getData)
     this.setData({
       getData:getData,
-      price:price.toFixed(2)
+      price:price.toFixed(2),
+      checked: getData.length!==0
     })
   },
   /**
@@ -147,7 +155,7 @@ Page({
     let getData = wx.getStorageSync('cate') || [];
     let flag ;
     for(let i = 0; i < getData.length; i++){
-      if(!getData[i].checked === true){
+      if(!getData[i].checked === true || getData.length === 0){
         //如果有一个=== false flag等于false
         flag = false;
         break

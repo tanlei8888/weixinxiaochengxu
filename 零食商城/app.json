@@ -1,9 +1,9 @@
 {
   "pages":[
-    "pages/index/index",
     "pages/ShoppingCart/index",
-    "pages/ProductDetail/index",
     "pages/myInfo/index",
+    "pages/index/index",
+    "pages/ProductDetail/index",
     "pages/pay/pay",
     "pages/address/address",
     "pages/cateDetail/index",
