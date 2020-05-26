@@ -61,6 +61,7 @@ Page({
     this.setData({
       checked:checked
     })
+    //
     for(let i = 0; i < getData.length; i++){
       //如果全局checked为false 让全局getdata数组里的每项checked变为fales
       if(!checked){
