@@ -1,5 +1,6 @@
 .ShoppingCart .empty {
   margin: 50% auto;
+  text-align: center;
 }
 .ShoppingCart .cate-item {
   display: flex;

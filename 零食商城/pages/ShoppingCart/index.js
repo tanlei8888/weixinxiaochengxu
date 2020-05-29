@@ -158,7 +158,7 @@ Page({
    */
   onShow: function () {
     let getData = wx.getStorageSync('cate') || [];
-    let flag ;
+    let flag;
     for(let i = 0; i < getData.length; i++){
       if(!getData[i].checked === true || getData.length === 0){
         //如果有一个=== false flag等于false
