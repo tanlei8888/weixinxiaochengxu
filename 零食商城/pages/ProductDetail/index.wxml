@@ -3,7 +3,7 @@
   <navigator class="carImg"
   bindtap="joinCar"
   url='/pages/ShoppingCart/index' 
-  open-type="navigate"
+  open-type="switchTab"
   >
     <image class="img" src="/image/cart.png"></image>
     <text>{{count}}</text>
